@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { styles } from '../styles.js';
+import { styles } from '../style.js';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
 
@@ -16,13 +16,12 @@ const Navbar = () => {
           to='/'
           className='flex items-center gap-2'
           onClick={()=>{
-            setActive('');
+            setActive("");
             window.scrollTo(0,0); //if clicked the page will scroll to the top
           }}
         >
-          <img src={logo} alt="logo"
-            className='w-9 h-9 object-contain'/>
-            <p className='text-white text-[18px] font-bold cursor-pointer'>Manav <span className='sm:block hidden'>Patel</span></p>
+          <img src={logo} alt="logo" style={{width: '80px', height: '80px'}} className='object-contain'/>
+          <p className='text-white text-[18px] font-bold cursor-pointer'>Manav <span className='sm:block hidden'>Patel</span></p>
         </Link>
       </div>
     </nav>
